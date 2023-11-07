@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./libreria/bootstrap.min.css" />
+    <link rel="stylesheet" href="./estilos.css" />
+    <script src="./libreria/jquery-3.6.1.min.js"></script>
+    <title>Paginacion</title>
+  </head>
+  <body class="fondo-color">
+    <div class="container mt-5">
+      <div class="card fondo-carta shadow-sm p-3 mb-5 rounded">
+        <div class="card-body">
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <label for="sel_proceso">Seleciona un proceso</label>
+              <select class="form-control" name="sel_proceso" id="sel_proceso">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+              </select>
+            </div>
+            <div class="col-3">
+              <label for="sel_size">Seleciona un tamaño</label>
+              <select class="form-control" name="sel_size" id="sel_size">
+                <option value="128">128</option>
+              </select>
+            </div>
+            <div class="col-2">
+              <button class="btn btn-primary mt-4" id="iniciar">
+                Iniciar proceso
+              </button>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <label for="procesoAct">Procesos activos</label>
+              <select
+                class="form-control"
+                name="procesoAct"
+                id="procesoAct"
+              ></select>
+            </div>
+            <div class="col-3">
+              <label for="procesoEspera">Procesos en espera</label>
+              <select
+                class="form-control"
+                name="procesoEspera"
+                id="procesoEspera"
+              ></select>
+            </div>
+            <div class="col-2 mt-2">
+              <button class="btn btn-success" id="Reiniciar">Reiniciar</button>
+              <button class="btn btn-danger" id="Terminar">Terminar</button>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <label for="contadorProcesos">Numero de procesos</label>
+              <input
+                type="text"
+                name="contadorProcesos"
+                id="contadorProcesos"
+                class="form-control"
+              />
+            </div>
+            <div class="col-2"></div>
+          </div>
+          <div class="row justify-content-center mt-4">
+            <div class="col">
+              <h2 class="text-center">Marco de Paginacion</h2>
+              <div id="p"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
