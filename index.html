@@ -9,70 +9,79 @@
     <title>Paginacion</title>
   </head>
   <body class="fondo-color">
-    <div class="container mt-5">
-      <div class="card fondo-carta shadow-sm p-3 mb-5 rounded">
-        <div class="card-body">
-          <div class="row justify-content-center">
-            <div class="col-3">
-              <label for="sel_proceso">Seleciona un proceso</label>
-              <select class="form-control" name="sel_proceso" id="sel_proceso">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
-              </select>
-            </div>
-            <div class="col-3">
-              <label for="sel_size">Seleciona un tamaño</label>
-              <select class="form-control" name="sel_size" id="sel_size">
-                <option value="128">128</option>
-              </select>
-            </div>
-            <div class="col-2">
-              <button class="btn btn-primary mt-4" id="iniciar">
-                Iniciar proceso
-              </button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-3">
-              <label for="procesoAct">Procesos activos</label>
-              <select
-                class="form-control"
-                name="procesoAct"
-                id="procesoAct"
-              ></select>
-            </div>
-            <div class="col-3">
-              <label for="procesoEspera">Procesos en espera</label>
-              <select
-                class="form-control"
-                name="procesoEspera"
-                id="procesoEspera"
-              ></select>
-            </div>
-            <div class="col-2 mt-2">
-              <button class="btn btn-success" id="Reiniciar">Reiniciar</button>
-              <button class="btn btn-danger" id="Terminar">Terminar</button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-3">
-              <label for="contadorProcesos">Numero de procesos</label>
-              <input
-                type="text"
-                name="contadorProcesos"
-                id="contadorProcesos"
-                class="form-control"
-              />
-            </div>
-            <div class="col-2"></div>
-          </div>
-          <div class="row justify-content-center mt-4">
-            <div class="col">
-              <h2 class="text-center">Marco de Paginacion</h2>
-              <div id="p"></div>
+    <div class="min-vh-100 d-flex flex-column justify-content-between">
+      <div class="container mt-5">
+        <div class="card fondo-carta shadow-sm p-3 mb-5 rounded">
+          <div class="card-body">
+            <div class="row justify-content-around">
+              <div class="col-md-3 align-self-center">
+                <label for="sel_proceso">Seleciona un proceso</label>
+                <select class="form-control mb-3" name="sel_proceso" id="sel_proceso">
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                  <option value="K">K</option>
+                </select>
+                <label for="sel_size">Seleciona un tamaño</label>
+                <select class="form-control mb-3" name="sel_size" id="sel_size">
+                  <option value="128">128</option>
+                </select>
+      
+                <button class="btn btn-primary mb-1 w-100" id="iniciar">
+                  Iniciar proceso
+                </button>
+                <button class="btn btn-success mb-1 w-100" id="Reiniciar">Reiniciar</button>
+                <button class="btn btn-danger mb-1 w-100" id="Terminar">Terminar</button>
+              </div>
+              <div class="col-md-3 align-self-center text-center">
+                <label for="procesoAct">Procesos activos</label>
+                <select
+                  class="form-select"
+                  name="procesoAct"
+                  id="procesoAct"
+                ></select>
+                <label for="procesoEspera">Procesos en espera</label>
+                <select
+                  class="form-select"
+                  name="procesoEspera"
+                  id="procesoEspera"
+                ></select>
+                <label for="contadorProcesos">Numero de procesos activos</label>
+                <input
+                  type="text"
+                  name="contadorProcesos"
+                  id="contadorProcesos"
+                  class="form-control text-center"
+                  readonly
+                />
+                <p class="lead text-danger" id="espacio"></p>
+                <label for="contadorProcesos">Numero de procesos en espera</label>
+                <input
+                  type="text"
+                  name="contadorProcesos"
+                  id="contadorProcesosEspera"
+                  class="form-control text-center"
+                  readonly
+                />
+              </div>
+              <div class="col-md-4">
+                <h2 class="text-center">Marco de Paginacion</h2>
+                <input type="text" class="form-control text-center mb-1" id="proceso0" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso1" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso2" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso3" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso4" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso5" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso6" placeholder="128" readonly>
+                <input type="text" class="form-control text-center mb-1" id="proceso7" placeholder="128" readonly>
+              </div>
             </div>
           </div>
         </div>
