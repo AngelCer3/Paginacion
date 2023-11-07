@@ -4,9 +4,15 @@ let procesoEspera = []
 
 function incremento(){
     let b = "";
+    let particion = 0;
+    let cont = 0;
     for(let i = 0 ; i < procesos.length ;i++){
-        $('#proceso'+i).val(procesos[i].proceso +" | "+ procesos[i].tamanio);
+        particion = parseInt(procesos[i].tamanio) / 64;//4,1
+        for(let j = cont; j < particion+cont; j++){
+            $('#proceso'+j).val(procesos[i].proceso +" | "+ procesos[i].tamanio);
+        }
         b += '<option value="'+i+'">'+procesos[i].proceso +" | "+ procesos[i].tamanio +'</option>'
+        cont += particion;        
     }
     $('#procesoAct').html(b);
 }
@@ -25,7 +31,7 @@ function limpiar(){
     $('#procesoEspera').html("");
     $('#contadorProcesos').val(0);
     $('#contadorProcesosEspera').val(0);
-    for(let i = 0 ; i < 8 ;i++){
+    for(let i = 0 ; i < 16 ;i++){
         $('#proceso'+i).val("");
     }
     procesos = [];
@@ -53,7 +59,7 @@ function terminarProceso(terminar){
             }
         }
     }
-    for(let i = 0 ; i < 8 ;i++){
+    for(let i = 0 ; i < 16 ;i++){
         $('#proceso'+i).val("");
     }
     procesoEspera= arreglo2;
